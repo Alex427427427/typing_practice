@@ -21,9 +21,13 @@ if __name__ == "__main__":
     # repeatedly
     # ask the user for a number of letters to generate, exit program if 0
     while True:
-        num_letters = int(input("How many letters would you like to generate? "))
-        if num_letters == 0:
-            break
+        try:
+            num_letters = int(input("How many letters would you like to generate? "))
+            if num_letters == 0:
+                break
+        except ValueError:
+            print("Please enter a valid number")
+            continue
         # generate a list of random letters
         letter_list = generate_string(num_letters)
         # print the list of letters as a single string and ask for the user to type it
