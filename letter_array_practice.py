@@ -12,7 +12,7 @@ def generate_string(string_length):
     letter = ""
     # Generate a list of random letters
     for i in range(0, string_length):
-        letter = random.choice(string.ascii_letters)
+        letter = random.choice(string.ascii_letters + " ,.!?;:\'\"")
         letter_list.append(letter)
     return letter_list
 
